@@ -1,0 +1,7 @@
+<response xmlns="http://dfs.org/server/response" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <status>ok</status>
+  <body xsi:type="res:body" xmlns:res="http://dfs.org/server/response">
+    <size>20424</size>
+  </body>
+</response>
+

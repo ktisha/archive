@@ -1,0 +1,8 @@
+<response xmlns="http://dfs.org/server/response" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <client>
+    <status>ok</status>
+    <body xsi:type="res:body" xmlns:res="http://dfs.org/server/response">
+      <sessionkey>69275be529f9614dba8dd61d713fc4938d8f5db7</sessionkey>
+    </body>
+  </client>
+</response>

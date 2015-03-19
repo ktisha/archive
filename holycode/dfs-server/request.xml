@@ -1,0 +1,22 @@
+
+<request xmlns="http://dfs.org/server">
+  <sessionkey>tipa1</sessionkey>
+</request>
+
+<request xmlns="http://dfs.org/server">
+
+  <sessionkey>tipa1</sessionkey>
+
+  <login>
+    <user> </user>
+    <pass> </pass>
+  </login>
+
+  <search>
+    <filelist> </filelist>
+
+  </search >
+
+
+</request>
+

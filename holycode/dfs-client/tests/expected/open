@@ -1,0 +1,8 @@
+<request xmlns="http://dfs.org/server" >
+ <sessionkey>39eb7364d5b2b43c53f4a475492a3ab00e3ecb37</sessionkey>
+ <action>list-action</action>
+ <list-action>
+  <action>get</action>
+  <id>1</id>
+ </list-action>
+</request>

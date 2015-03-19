@@ -1,0 +1,6 @@
+<response xmlns="http://dfs.org/server/response">
+  <agent>
+    <status>error</status>
+    <message>File '1000' doesn't exist</message>
+  </agent>
+</response>

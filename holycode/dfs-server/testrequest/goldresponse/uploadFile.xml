@@ -1,0 +1,20 @@
+<response xmlns="http://dfs.org/server/response" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <client>
+    <status>ok</status>
+    <body xsi:type="res:body" xmlns:res="http://dfs.org/server/response">
+      <file>
+        <id>13</id>
+      </file>
+    </body>
+  </client>
+</response>
+<response xmlns="http://dfs.org/server/response" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <client>
+    <status>ok</status>
+    <body xsi:type="res:body" xmlns:res="http://dfs.org/server/response">
+      <file>
+        <id>13</id>
+      </file>
+    </body>
+  </client>
+</response>

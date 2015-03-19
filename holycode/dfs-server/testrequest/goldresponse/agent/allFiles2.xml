@@ -1,0 +1,8 @@
+<response xmlns="http://dfs.org/server/response">
+  <agent>
+    <status>ok</status>
+    <a-file>
+      <id>6</id>
+    </a-file>
+  </agent>
+</response>

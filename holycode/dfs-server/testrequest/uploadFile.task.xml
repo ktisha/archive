@@ -1,0 +1,14 @@
+<request xmlns="http://dfs.org/server">
+  <client>
+    <sessionkey>12345</sessionkey>
+    <action>file-action</action>
+
+    <file-action>
+      <action>upload</action>
+      <filesize>67</filesize>
+      <filename>test17.upload</filename>
+      <filelist-id>9</filelist-id>
+      <copy>2</copy>
+    </file-action>
+  </client>
+</request>

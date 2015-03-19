@@ -1,0 +1,15 @@
+<response xmlns="http://dfs.org/server/response" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <client>
+    <status>ok</status>
+    <body xsi:type="res:body" xmlns:res="http://dfs.org/server/response">
+      <filelist>
+        <id>6</id>
+        <filelistname>test</filelistname>
+      </filelist>
+      <filelist>
+        <id>9</id>
+        <filelistname>newList</filelistname>
+      </filelist>
+    </body>
+  </client>
+</response>

@@ -1,0 +1,46 @@
+<response xmlns="http://dfs.org/server/response" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <status>ok</status>
+  <body xsi:type="res:body" xmlns:res="http://dfs.org/server/response">
+    <filelist>
+      <id>5</id>
+      <filelistname>list</filelistname>
+    </filelist>
+    <filelist>
+      <id>6</id>
+      <filelistname>list1</filelistname>
+    </filelist>
+    <filelist>
+      <id>7</id>
+      <filelistname>d</filelistname>
+    </filelist>
+    <filelist>
+      <id>8</id>
+      <filelistname>c</filelistname>
+    </filelist>
+    <filelist>
+      <id>9</id>
+      <filelistname>list5</filelistname>
+    </filelist>
+    <filelist>
+      <id>10</id>
+      <filelistname>list6</filelistname>
+    </filelist>
+    <filelist>
+      <id>11</id>
+      <filelistname>list2</filelistname>
+    </filelist>
+    <filelist>
+      <id>12</id>
+      <filelistname>list3</filelistname>
+    </filelist>
+    <filelist>
+      <id>13</id>
+      <filelistname>list4</filelistname>
+    </filelist>
+    <filelist>
+      <id>14</id>
+      <filelistname>abcde</filelistname>
+    </filelist>
+  </body>
+</response>
+

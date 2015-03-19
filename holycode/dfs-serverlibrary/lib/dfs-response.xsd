@@ -1,0 +1,75 @@
+<xs:schema
+   xmlns:xs="http://www.w3.org/2001/XMLSchema"
+   xmlns:df="http://dfs.org/server/response"
+   targetNamespace="http://dfs.org/server/response"
+   elementFormDefault="qualified">
+
+  <xs:complexType name="file">
+      <xs:sequence>
+        <xs:element name="id" type="xs:integer" maxOccurs="1" minOccurs="1" />
+        <xs:element name="filename" type="xs:string" />
+        <xs:element name="filesize" type="xs:integer" />
+        <xs:element name="filelist" type="xs:string" />
+        <xs:element name="copy" type="xs:integer" />
+        <xs:element name="state" type="xs:string" />
+      </xs:sequence>
+  </xs:complexType>
+
+
+  <xs:complexType name="filelist">
+      <xs:sequence>
+        <xs:element name="id" type="xs:integer" maxOccurs="1" minOccurs="1" />
+        <xs:element name="filelistname" type="xs:string" maxOccurs="1" minOccurs="1" />
+      </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="body">
+      <xs:choice>
+        <xs:element name="sessionkey" type="xs:string" />
+        <xs:element name="id" type="xs:integer" />
+        <xs:element name="offset" type="xs:integer" />
+        <xs:element name="size" type="xs:integer" />
+        <xs:element name="message" type="xs:string" />
+        <xs:element name="file" type="df:file" />
+        <xs:element name="filelist" type="df:filelist" />
+      </xs:choice>
+  </xs:complexType>
+
+  <xs:complexType name="client">
+    <xs:all>
+      <xs:element name="status" type="xs:string" maxOccurs="1" />
+      <xs:element name="body" />
+    </xs:all>
+  </xs:complexType>
+
+
+  <xs:complexType name="a-file">
+      <xs:sequence>
+        <xs:element name="id" type="xs:integer" />
+      </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="agent">
+    <xs:sequence>
+      <xs:element name="status" type="xs:string" minOccurs="1" maxOccurs="1" />
+      <xs:element name="message" type="xs:string" minOccurs="0" maxOccurs="1" />
+      <xs:element name="free-space" type="xs:integer" minOccurs="0" maxOccurs="1" />
+      <xs:element name="a-file" type="df:a-file" minOccurs="0" />
+    </xs:sequence>
+  </xs:complexType>
+
+
+<!-- *********************************************** -->
+<!-- BASE RESPONSE CHOICE -->
+  <xs:element name="response">
+    <xs:complexType>
+      <xs:choice>
+        <xs:element name="client" type="df:client" /> 
+        <xs:element name="agent" type="df:agent" /> 
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+    
+
+</xs:schema>
+

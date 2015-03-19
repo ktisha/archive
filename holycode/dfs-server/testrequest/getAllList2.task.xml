@@ -1,0 +1,7 @@
+<request xmlns="http://dfs.org/server">
+  <client>
+    <sessionkey>12345</sessionkey>
+    <action>get-all-list</action>
+
+  </client>
+</request>

@@ -1,0 +1,44 @@
+login.task.xml
+login-fail.task.xml
+password-fail.task.xml
+sessionkey-fail.task.xml
+
+clientAction-fail.task.xml
+createFilelist.task.xml				-> list6, list 9
+getAllList.task.xml					-> list 6 (10), list 9
+searchAllInList.task.xml	list 6	-> test.file(10)
+negativeFileSearch.task.xml			-> error
+positiveFileSearch.task.xml			-> test.file(10)
+search-fail.task.xml				-> error
+createFilelist2.task.xml			-> list 6, list 9, list 10
+removeList.task.xml					-> list 6, list 10
+removeList-fail.task.xml			-> error
+getAllList2.task.xml				-> list 6, list 9
+
+listAction-fail.task.xml			-> error
+getAllFile.task.xml			list 6	-> test.file 10
+getAllFile-fail.task.xml			-> error
+
+fileAction-fail.task.xml			-> error
+uploadFile-fail.task.xml			-> error
+uploadFile.task.xml			list 9	-> list 6(10), list 9(13)
+dublicateUpload-fail.task.xml		-> error
+moveFile-fail.task.xml				-> error
+moveToBadList-fail.task.xml			-> error
+moveAlienFile-fail.task.xml			-> error
+moveFile.task.xml					-> list 6, list 9(10, 13)
+searchAllInList2.task.xml	list 9	-> test.file(10) test17.upload(13)
+downloadFile-fail.task.xml			-> error
+downloadFile.task.xml				-> test.down == test.upload
+removeFile-fail.task.xml			-> error
+removeFile.task.xml					-> list 6, list 9(10)
+searchAllInList3.task.xml	list 9	-> test.file(10)
+
+agent/free-space	
+agent/allFiles						-> id 5
+agent/allFiles2						-> id 6
+agent/uploadFile size 67 id 9000	-> id 9000		
+agent/downloadFile 		id 9000		-> ok
+agent/downloadFile-fail id 1000		-> error
+agent/removeFile					-> ok
+agent/removeFile-fail				-> error 

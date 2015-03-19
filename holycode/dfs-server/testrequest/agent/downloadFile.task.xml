@@ -1,0 +1,8 @@
+<request xmlns="http://dfs.org/server">
+  <agent>
+  	<action>download</action>
+    <download>
+    	<file-id>9000</file-id>
+    </download>
+  </agent>
+</request>

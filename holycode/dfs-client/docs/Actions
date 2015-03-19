@@ -1,0 +1,32 @@
+// List of possible actions
+
+// actions in Login
+login
+listrequest
+
+// actions with file list
+new 
+open
+search
+deleteList
+
+// actions with files
+add
+download
+deleteFile
+
+///////////////////////////////
+sendFile
+update
+listrequest
+getfile
+login
+search
+new 
+open 
+deleteFile
+download
+add
+copy
+deleteFList
+error

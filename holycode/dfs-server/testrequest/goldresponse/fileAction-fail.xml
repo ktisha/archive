@@ -1,0 +1,8 @@
+<response xmlns="http://dfs.org/server/response" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <client>
+    <status>error</status>
+    <body xsi:type="res:body" xmlns:res="http://dfs.org/server/response">
+      <message>Request error: unsupported action (badAction)</message>
+    </body>
+  </client>
+</response>

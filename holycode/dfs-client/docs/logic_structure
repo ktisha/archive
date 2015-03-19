@@ -1,0 +1,82 @@
+1. View
+	1. LoginDialog: public QDialog, public Ui::LoginDialog
+	    void fillModel();
+	2. MainWindow : public QMainWindow, public Ui::MainWindow
+	    void updateTable();
+	    void setIcons();
+	    MdiChild *createMdiChild();     //create subwindow
+	    MdiChild *activeMdiChild();     // get active subwindow
+	    
+	3. MdiChild : public QWidget
+    	void newList()              // create and fill table
+    	
+	4. NumericWidget: public QTableWidgetItem
+	    bool operator< ( const QTableWidgetItem &)
+	    
+	5. InputDialog : public Ui::Dialog, public QDialog
+	    getText()
+	    
+	6. OpenDialog : public Ui::openDialog, public QDialog
+	    getActive()
+	    addItem(QString)        // add string to list
+	    
+	7. FailDialog: public QDialog, public Ui::Fail
+	8. AddFileDialog: public QDialog, public Ui::AddFileDialog
+	9. ConfirmationDialog: public QDialog, public Ui::ConfirmationDialog
+
+2. Protocol
+	1. TcpConnector: public QTcpSocket      - network
+	    connect()
+	    setSettings()
+	    closeConnection()
+	    sendData(QByteArray const& arr)     // write arr to socket
+	        
+	2. XmlBuilder: public QObject           -- makes xml's
+    	makeXml()
+    	some functions like SmthToDom()
+ 		
+	3. xmlParser                            -- parse responses
+	    Parser: public QObject
+	        parse()
+	        registerFactory(RegisterParserHandler * h, State name)
+
+	    RegisterParserHandler -- abstract factory
+	    RegisterParserHandlerImpl : RegisterParserHandler
+	        QXmlDefaultHandler * create()
+	        
+    4. some handlers : public QXmlDefaultHandler    -- handler for parsing xml
+        characters()
+        bool endElement ();
+        bool startElement ();
+        
+	5. Connector : public QObject       --provides protocol interface to Controller
+        void connectToServer();      // connect using tcpConnector
+        void sendData();            // build xml and send it
+        bool parseResponse();           // parse incoming xml and get files
+        void sendFile();                //send files
+        void login(QString, QString);
+        void download();                // for download files
+
+3. Controller: public QObject       -- organize connection between protocol and view,
+                                            containts main logic
+    connectSignals(LoginDialog* loginDialog, MainWindow* mainWind,
+                   Connector* connector);
+    functions for all available buttons
+  
+4. Model - set/get functions        -- data model
+	1. User 
+	2. FileDescription	
+	3. FileList		
+	4. MainModel	
+	5. State
+    
+5. Exceptions(mainmodel, filelist): public QtConcurrent::Exception
+        raise()
+        message()
+
+6. Logger           -- writes log
+    write()
+    
+7. Test: public QObject
+    some functions like testSmth()
+

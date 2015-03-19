@@ -1,0 +1,10 @@
+<request xmlns="http://dfs.org/server" >
+ <sessionkey>39eb7364d5b2b43c53f4a475492a3ab00e3ecb37</sessionkey>
+ <action>file-action</action>
+ <file-action>
+  <action>upload</action>
+  <filesize>100</filesize>
+  <filename>filename</filename>
+  <filelist-id>1</filelist-id>
+ </file-action>
+</request>

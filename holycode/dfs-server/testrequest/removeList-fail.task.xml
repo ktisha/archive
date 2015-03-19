@@ -1,0 +1,10 @@
+<request xmlns="http://dfs.org/server">
+  <client>
+    <sessionkey>12345</sessionkey>
+    <action>list-action</action>
+    <list-action>
+       <action>remove</action>
+       <id>1000</id>
+    </list-action>
+  </client>
+</request>

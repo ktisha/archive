@@ -1,0 +1,7 @@
+    <tr>
+        <td>{{ # }}</td>
+        <td>{{ name }}</td>
+        <td>{{ size }}</td>
+        <td>{{ copy }}</td>
+        <td>{{ filelist }}</td>
+    </tr>

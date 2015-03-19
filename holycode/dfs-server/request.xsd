@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<xs:schema
+   xmlns:xs="http://www.w3.org/2001/XMLSchema"
+   xmlns:po="http://dfs.org/request"
+   targetNamespace="http://dfs.org/request"
+   elementFormDefault="qualified">
+
+  <xs:element name="request">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="sessionkey" type="xs:string"/>
+     </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+
+</xs:schema>
+

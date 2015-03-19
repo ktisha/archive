@@ -1,0 +1,8 @@
+<request xmlns="http://dfs.org/server">
+  <agent>
+  	<action>remove</action>
+    <remove>
+    	<file-id>1000</file-id>
+    </remove>
+  </agent>
+</request>

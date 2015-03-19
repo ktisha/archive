@@ -1,0 +1,47 @@
+<response xmlns="http://dfs.org/server/response" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <status>ok</status>
+  <body xsi:type="res:body" xmlns:res="http://dfs.org/server/response">
+    <file>
+      <id>17</id>
+      <filename>about_24.png</filename>
+      <filesize>1545</filesize>
+      <filelist>list1</filelist>
+    </file>
+    <file>
+      <id>18</id>
+      <filename>add_24.png</filename>
+      <filesize>900</filesize>
+      <filelist>list1</filelist>
+    </file>
+    <file>
+      <id>19</id>
+      <filename>dfs-client</filename>
+      <filesize>3728770</filesize>
+      <filelist>list1</filelist>
+    </file>
+    <file>
+      <id>20</id>
+      <filename>dfs-client.pro</filename>
+      <filesize>1988</filesize>
+      <filelist>list1</filelist>
+    </file>
+    <file>
+      <id>22</id>
+      <filename>moc_fail.cpp</filename>
+      <filesize>1823</filesize>
+      <filelist>list1</filelist>
+    </file>
+    <file>
+      <id>21</id>
+      <filename>moc_logindialog.cpp</filename>
+      <filesize>2432</filesize>
+      <filelist>list1</filelist>
+    </file>
+    <file>
+      <id>23</id>
+      <filename>ui_fail.h</filename>
+      <filesize>2902</filesize>
+      <filelist>list1</filelist>
+    </file>
+  </body>
+</response>

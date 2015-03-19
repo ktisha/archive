@@ -1,0 +1,9 @@
+<request xmlns="http://dfs.org/server">
+  <client>
+    <action>login</action>
+    <login>
+      <user>student</user>
+      <pass>student</pass>
+    </login>
+  </client>
+</request>

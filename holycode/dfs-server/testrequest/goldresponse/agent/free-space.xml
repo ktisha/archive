@@ -1,0 +1,6 @@
+<response xmlns="http://dfs.org/server/response">
+  <agent>
+    <status>ok</status>
+    <free-space>1073741757</free-space>
+  </agent>
+</response>

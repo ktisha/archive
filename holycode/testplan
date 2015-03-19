@@ -1,0 +1,98 @@
+I. Client
+	1. Login window
+		1. Correct login and password input -> open "Main window"
+		2. Input of empty string into the any field -> Error: Enter login or password
+		3. Extrimely long login (>32) -> Error: 
+		4. Extrimely long password (>40) -> Error:
+		5. Enter with nonexistent user name -> Error: Bad login or pass
+		6. Wrong password -> Error: Bad login or pass
+		7. Incorrect port or server format -> No connection occurs: + Warning: "" 
+		8. Correct work of "Exit" -> exit
+
+	2. Main window
+
+		1. Menu subfolder "List"
+			1. Click "List\New" -> Input form "New file list" opens 
+				1. Empty field input + press "Ok" -> Error: Please...
+				2. Extrimely long name (> 4000) -> Error: Please...
+				3. Correct input 	-> Creation MDI child window
+									-> List of the enable buttons: only "Add"
+
+			2. Click "List\Open" -> "Open window" with the file list opens
+				1. Click "Ok" -> Show choosen file list in the "MDI window"
+				2. If file list is empty, then "Ok" will be disabled
+				3. Click "Cancel" -> break operation
+
+			3. Click "List\Export to PDF"
+				1. If file list exists, then launch "Open window" + bla-bla-bla
+				2. if file list is empty, then "Export" will be disabled 
+
+			4. Click "List\Remove filelist" -> launch "Open window" + make removing
+
+			5. Click "List\Exit" -> do exit
+
+		2. Menu subfolder "Edit"
+			1. If no MDI childs are opened, all buttons will be disabled
+			2. If there is any opened MDI child in the "Main window" -> all buttons in 
+			   the "Edit" subfolder are enable. Only "Add" and "Download" have functionality.
+				1. 	Click "Add" -> "System Dialog window" opens
+					Choose file + click "Ok" -> file addes in the list, but don't display it
+				2. 	Select file by clicking on it in the "MDI window" + click "Download" 
+					-> selected file downloads into DFS_CLIENT_DIR/Downloads
+
+	3. Server responses
+		TODO
+
+		
+II Server
+	1. Client requests
+
+		1.	login request 
+			1. correct data									-> TEST_REQUEST_DIR/goldresponse/login.xml
+			2. wrong login 									-> TEST_REQUEST_DIR/goldresponse/login-fail.xml 
+			3. wrong password								-> TEST_REQUEST_DIR/goldresponse/password-fail.xml
+		2.	nonlogin request with wrong session key			-> TEST_REQUEST_DIR/goldresponse/sessionkey-fail.xml
+		3.	search request
+			1. search of existent file with correct id		-> TEST_REQUEST_DIR/goldresponse/positiveFileSearch.xml
+			2. search of nonexistent file with correct id	-> TEST_REQUEST_DIR/goldresponse/negativeFileSearch.xml
+			3. search of all files in the current list		-> TEST_REQUEST_DIR/goldresponse/searchAllInList.xml
+			4. search with incorrect file id				-> TEST_REQUEST_DIR/goldresponse/search-fail.xml
+		4.	list-action request
+			1. create list									-> TEST_REQUEST_DIR/goldresponse/createFileList.xml
+			2. get all files from list						-> TEST_REQUEST_DIR/goldresponse/getAllFile.xml
+			3. get files from nonexistent list				-> TEST_REQUEST_DIR/goldresponse/getAllFile-fail.xml
+			4. remove empty list							-> TEST_REQUEST_DIR/goldresponse/removeList.xml	
+			5. bad action									-> TEST_REQUEST_DIR/goldresponse/listAction-fail.xml
+		5. get-all-list request								-> TEST_REQUEST_DIR/goldresponse/getAllList.xml
+		6.	file-action request
+			We need launch at least one agent for the proper work of the tests
+			1. upload
+				1. correct file to the correct list			-> TEST_REQUEST_DIR/goldresponse/uploadFile.xml
+				2. correct file	to the nonexistent list		-> TEST_REQUEST_DIR/goldresponse/uploadFile-fail.xml
+				2. dublicate file to the correct list		-> TEST_REQUEST_DIR/goldresponse/TODO
+			2. download
+				1. file with correct id 					-> TEST_REQUEST_DIR/goldresponse/downloadFile.xml
+				2. file with nonexistent id					-> TEST_REQUEST_DIR/goldresponse/downloadFile-fail.xml
+			3. move
+				1. file with correct id 					-> TEST_REQUEST_DIR/goldresponse/moveFile.xml
+				2. file with nonexistent id 				-> TEST_REQUEST_DIR/goldresponse/moveFile-fail.xml
+				3. alien file  								-> TEST_REQUEST_DIR/goldresponse/TODO
+			3. remove
+				1. correct removing 						-> TEST_REQUEST_DIR/goldresponse/removeFile.xml
+				2. trial of removing file with wrong id 	-> TEST_REQUEST_DIR/goldresponse/removeFile-fail.xml
+			4. bad action									-> TEST_REQUEST_DIR/goldresponse/fileAction-fail.xml
+		7. Incorrect client action							-> TEST_REQUEST_DIR/goldresponse/clientAction-fail.xml
+
+III Agent
+	1. Server requests
+
+		1. upload
+			1. existent file 								-> TEST_REQUEST_DIR/goldresponse/agent-upload.xml
+			2. nonexistent file	 							-> TEST_REQUEST_DIR/goldresponse/agent-upload-fail.xml
+		2. download
+			1. file with correct id 						-> TEST_REQUEST_DIR/goldresponse/agent-download.xml
+			2. file with wrong id 							-> TEST_REQUEST_DIR/goldresponse/agent-download-fail.xml
+		3. remove
+			1. correct removing 							-> TEST_REQUEST_DIR/goldresponse/agent-remove.xml
+			2. trial of removing file with wrong id 		-> TEST_REQUEST_DIR/goldresponse/agent-remove-fail.xml
+		4. bad action										-> TEST_REQUEST_DIR/goldresponse/agent-fileAction-fail.xml

@@ -1,0 +1,6 @@
+<response xmlns="http://dfs.org/server/response" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <status>error</status>
+  <body xsi:type="res:body" xmlns:res="http://dfs.org/server/response">
+    <message>Bad login or pass</message>
+  </body>
+</response>

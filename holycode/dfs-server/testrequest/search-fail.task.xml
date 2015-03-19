@@ -1,0 +1,11 @@
+<request xmlns="http://dfs.org/server">
+  <client>
+    <sessionkey>12345</sessionkey>
+    <action>search</action>
+
+    <search>
+      <query>%%</query>
+	  <id>1000</id>
+    </search>
+  </client>
+</request>

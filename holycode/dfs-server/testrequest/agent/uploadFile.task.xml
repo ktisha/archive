@@ -1,0 +1,9 @@
+<request xmlns="http://dfs.org/server">
+  <agent>
+  	<action>upload</action>
+    <upload>
+    	<file-id>9000</file-id>
+      	<size>67</size>
+    </upload>
+  </agent>
+</request>

@@ -1,0 +1,42 @@
+<response xmlns="http://dfs.org/server/response" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <status>ok</status>
+  <body xsi:type="res:body" xmlns:res="http://dfs.org/server/response">
+    <file>
+      <id>30</id>
+      <filename>Actions</filename>
+      <filesize>169</filesize>
+      <filelist>l</filelist>
+    </file>
+    <file>
+      <id>16</id>
+      <filename>about_24.png</filename>
+      <filesize>1545</filesize>
+      <filelist>l</filelist>
+    </file>
+    <file>
+      <id>24</id>
+      <filename>connector.o</filename>
+      <filesize>41568</filesize>
+      <filelist>l</filelist>
+    </file>
+    <file>
+      <id>17</id>
+      <filename>dfs-client</filename>
+      <filesize>295115</filesize>
+      <filelist>l</filelist>
+    </file>
+    <file>
+      <id>29</id>
+      <filename>dfs-client.pro.user</filename>
+      <filesize>48915</filesize>
+      <filelist>l</filelist>
+    </file>
+    <file>
+      <id>31</id>
+      <filename>listrequesthandler.o</filename>
+      <filesize>67712</filesize>
+      <filelist>l</filelist>
+    </file>
+  </body>
+</response>
+

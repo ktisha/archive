@@ -1,0 +1,119 @@
+<xs:schema
+   xmlns:xs="http://www.w3.org/2001/XMLSchema"
+   xmlns:df="http://dfs.org/server"
+   targetNamespace="http://dfs.org/server"
+   elementFormDefault="qualified">
+
+<!-- AGENT REQUEST -->
+
+  <xs:complexType name="download">
+    <xs:all>
+      <xs:element name="file-id" type="xs:integer" minOccurs="1" maxOccurs="1" />
+      <xs:element name="offset" type="xs:integer" minOccurs="0" maxOccurs="1" />
+    </xs:all>
+  </xs:complexType>
+
+  <xs:complexType name="upload">
+    <xs:all>
+      <xs:element name="file-id" type="xs:integer" minOccurs="1" maxOccurs="1" />
+      <xs:element name="size" type="xs:integer" minOccurs="1" maxOccurs="1" />
+    </xs:all>
+  </xs:complexType>
+
+
+  <xs:complexType name="remove">
+    <xs:all>
+      <xs:element name="file-id" type="xs:integer" minOccurs="1" maxOccurs="1" />
+    </xs:all>
+  </xs:complexType>
+
+
+  <xs:group name="action-value">
+      <xs:choice>
+        <xs:element name="download" type="df:download" />
+        <xs:element name="upload" type="df:upload" />
+        <xs:element name="remove" type="df:remove" />
+      </xs:choice>
+  </xs:group>
+   
+  <xs:complexType name="agent">
+    <xs:sequence>
+      <!-- free-space, all-files -->
+      <xs:element name="action" type="xs:string" minOccurs="1" maxOccurs="1" />
+      <xs:group ref="df:action-value" minOccurs="0" maxOccurs="1" />
+    </xs:sequence>
+  </xs:complexType>
+
+<!-- CLIENT REQUEST -->
+
+  <xs:complexType name="login">
+    <xs:all>
+      <xs:element name="user" type="xs:string" minOccurs="1" maxOccurs="1" />
+      <xs:element name="pass" type="xs:string" minOccurs="1" maxOccurs="1" />
+    </xs:all>
+  </xs:complexType>
+
+  <xs:complexType name="search">
+    <xs:sequence>
+      <xs:element name="query" type="xs:string" minOccurs="1" maxOccurs="1" />
+      <xs:element name="id" type="xs:integer" minOccurs="0" maxOccurs="1" />
+    </xs:sequence>
+  </xs:complexType>
+
+
+  <xs:complexType name="list-action">
+    <xs:sequence>
+      <!-- create, get, remove (only empty list) -->
+      <xs:element name="action" type="xs:string" minOccurs="1" maxOccurs="1" />
+      <xs:element name="id" type="xs:integer" minOccurs="0" maxOccurs="1" />
+      <xs:element name="filelistname" type="xs:string" minOccurs="0" maxOccurs="1" />
+    </xs:sequence>
+  </xs:complexType>
+
+
+  <xs:complexType name="file-action">
+    <xs:sequence>
+      <!-- upload, download, remove, move, NOT_SUPPORT: copy -->
+      <xs:element name="action" type="xs:string" minOccurs="1" maxOccurs="1" />
+      <xs:element name="id" type="xs:integer" minOccurs="0" maxOccurs="1" />
+      <xs:element name="filesize" type="xs:integer" minOccurs="0" maxOccurs="1" />
+      <xs:element name="filename" type="xs:string" minOccurs="0" maxOccurs="1" />
+      <xs:element name="filelist-id" type="xs:integer" minOccurs="0" maxOccurs="1" />
+      <xs:element name="copy" type="xs:integer" minOccurs="0" maxOccurs="1" />
+
+      <!--xs:element name="offset" type="xs:integer" minOccurs="0" maxOccurs="1" /-->
+    </xs:sequence>
+  </xs:complexType>
+
+
+  <xs:group name="client-action-value">
+      <xs:choice>
+        <xs:element name="login" type="df:login" />
+        <xs:element name="search" type="df:search" />
+        <xs:element name="list-action" type="df:list-action" />
+        <xs:element name="file-action" type="df:file-action" />
+      </xs:choice>
+  </xs:group>
+
+  <xs:complexType name="client">
+    <xs:sequence>
+      <xs:element name="sessionkey" type="xs:string" minOccurs="0" maxOccurs="1" />
+      <!-- login, search, get-all-list, list-action, file-action -->
+      <xs:element name="action" type="xs:string" minOccurs="1" maxOccurs="1" />
+      <xs:group ref="df:client-action-value" minOccurs="0" maxOccurs="1" />
+    </xs:sequence>
+  </xs:complexType>
+
+
+<!-- *********************************************** -->
+<!-- BASE REQUEST CHOICE -->
+  <xs:element name="request">
+    <xs:complexType>
+      <xs:choice>
+        <xs:element name="client" type="df:client" /> 
+        <xs:element name="agent" type="df:agent" /> 
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+
+</xs:schema>

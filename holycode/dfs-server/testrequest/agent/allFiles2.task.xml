@@ -1,0 +1,5 @@
+<request xmlns="http://dfs.org/server">
+  <agent>
+    <action>all-files</action>
+  </agent>
+</request>

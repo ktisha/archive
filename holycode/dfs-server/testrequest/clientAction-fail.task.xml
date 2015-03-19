@@ -1,0 +1,10 @@
+<request xmlns="http://dfs.org/server">
+  <client>
+    <sessionkey>12345</sessionkey>
+    <action>badAction</action>
+    <list-action>
+       <action>create</action>
+       <filelistname>newList</filelistname>
+    </list-action>
+  </client>
+</request>
