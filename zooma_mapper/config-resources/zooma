@@ -1,0 +1,10 @@
+#!/bin/sh
+
+base=${0%/*};
+current=`pwd`;
+java=$JAVA_HOME/bin/java;
+args="";
+classpath="$base/config:$base/zooma-1.0-SNAPSHOT.jar";
+
+$java $args -classpath $classpath uk.ac.ebi.microarray.zooma.OntologyMappingDriver $@ 2>&1
+

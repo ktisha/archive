@@ -1,0 +1,35 @@
+RECompiler class:
+
+This class compiles pattern and provides a parser that recognizes regular expressions.
+
+It recognizes expressions according to the following rules.
+
+ *     expression    	= term orTerm*;
+ *     term          	= factor nextFactor*;
+ *     orTerm        	= '|' term;
+ *     factor        	= phrase | phraseStar | phraseQuestion | phrasePlus;
+ *     nextFactor   	= factor;
+ *     phrase       	= letterOrDigit | '(' expression ')' | slashExpr | '[' letters ']';
+ *     phraseStar   	= phrase '*';
+ *     phraseQuestion	= phrase '?';
+ *     phrasePlus		= phrase '+'; 
+ *     letterOrDigit 	= Letter | Digit | AnyChar;
+ * 	   slashExpr		= '\' specialChar;
+ * 	   specialChar		= w | d | t | W | D | s | S;
+ *     letters			= letterOrDigit '-' letterOrDigit | letterRepetition;
+ *	   letterRepetition = letterOrDigit nextLetter*;
+ * 	   nextLetter		= letterOrDigit | Eps;
+
+Parser class:
+To allow a parser to build a meaningful result, a Parser object collaborates
+with Assembler objects that know which work to perform as a parser
+recognizes parts of a string.
+Some classes in the Parser hierarchy define aggregations of other parsers.
+Other classes in the hierarchy are terminals,
+which are parsers that can match a sequence without help of other parsers.
+
+
+Simple use case:
+
+Parser parser = RECompiler.compile("[vfba]b*");
+boolean match = parser.matchRE("ab");

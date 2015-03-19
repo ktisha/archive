@@ -1,0 +1,6 @@
+# Ontologies preference, listed by ontology name, one per line
+
+# EFO
+http://www.ebi.ac.uk/efo/="ArrayExpress Experimental Factor Ontology,Experimental Factor Ontology,http://www.ebi.ac.uk/efo/,EFO"
+# FMA
+http://sig.uw.edu/fma="Foundational Model of Anatomy,FMA"

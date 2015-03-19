@@ -1,0 +1,6 @@
+# Rejected ontologies - i.e. ontologies that should never be mapped to
+# Specify the "key" value first - this should be the ontology URI or some other unique ID
+# The values are a comma separated list of labels or accessions that this ontology can be identified with in a variety of sources
+
+# never map to the unit ontology
+http://purl.org/obo/owl/UO=Unit Ontology,UO,http://purl.org/obo/owl/UO

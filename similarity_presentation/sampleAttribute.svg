@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="744.09448819"
+   height="1052.3622047"
+   id="svg6790"
+   version="1.1"
+   inkscape:version="0.47 r22583"
+   sodipodi:docname="sampleAttribute.svg">
+  <defs
+     id="defs6792">
+    <inkscape:perspective
+       sodipodi:type="inkscape:persp3d"
+       inkscape:vp_x="0 : 526.18109 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_z="744.09448 : 526.18109 : 1"
+       inkscape:persp3d-origin="372.04724 : 350.78739 : 1"
+       id="perspective6798" />
+    <inkscape:perspective
+       id="perspective7344"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <inkscape:perspective
+       id="perspective7441"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.35"
+     inkscape:cx="1251.521"
+     inkscape:cy="634.28571"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="true"
+     inkscape:window-width="911"
+     inkscape:window-height="551"
+     inkscape:window-x="47"
+     inkscape:window-y="24"
+     inkscape:window-maximized="0">
+    <inkscape:grid
+       type="xygrid"
+       id="grid7310" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata6795">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <rect
+       style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:2.34520793;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="rect7312"
+       width="440"
+       height="240"
+       x="120"
+       y="52.362183" />
+    <text
+       xml:space="preserve"
+       style="font-size:27.60148621px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
+       x="139.64983"
+       y="146.49232"
+       id="text7314"
+       transform="scale(0.90225664,1.1083321)"><tspan
+         sodipodi:role="line"
+         id="tspan7316"
+         x="139.64983"
+         y="146.49232">&lt;sampleattribute&gt;</tspan><tspan
+         sodipodi:role="line"
+         x="139.64983"
+         y="180.99419"
+         id="tspan7318">  &lt;category&gt;Age&lt;/category&gt;</tspan><tspan
+         sodipodi:role="line"
+         x="139.64983"
+         y="215.49603"
+         id="tspan7320">  &lt;value&gt;3 days&lt;/value&gt;</tspan><tspan
+         sodipodi:role="line"
+         x="139.64983"
+         y="388.00534"
+         id="tspan7330">&lt;/sampleattribute&gt;</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:40px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
+       x="160"
+       y="92.362183"
+       id="text7332"><tspan
+         sodipodi:role="line"
+         id="tspan7334"
+         x="160"
+         y="92.362183">Experiment 1</tspan></text>
+    <rect
+       style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:2.34520793;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="rect7312-7"
+       width="440"
+       height="240"
+       x="120"
+       y="332.36218" />
+    <text
+       xml:space="preserve"
+       style="font-size:38.29708481px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
+       x="163.633"
+       y="356.50964"
+       id="text7358"
+       transform="scale(0.95742711,1.0444659)"><tspan
+         sodipodi:role="line"
+         id="tspan7360"
+         x="163.633"
+         y="356.50964">Experiment 2</tspan><tspan
+         sodipodi:role="line"
+         x="163.633"
+         y="404.38101"
+         id="tspan7362" /></text>
+    <text
+       xml:space="preserve"
+       style="font-size:26.6495266px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
+       x="133.75661"
+       y="393.27759"
+       id="text7364"
+       transform="scale(0.89715193,1.1146384)"><tspan
+         sodipodi:role="line"
+         id="tspan7366"
+         x="133.75661"
+         y="393.27759">&lt;sampleattribute&gt;</tspan><tspan
+         sodipodi:role="line"
+         x="133.75661"
+         y="426.58951"
+         id="tspan7368">  &lt;category&gt;cell type&lt;/category&gt;</tspan><tspan
+         sodipodi:role="line"
+         x="133.75661"
+         y="459.9014"
+         id="tspan7370">  &lt;value&gt;PBMC&lt;/value&gt;</tspan><tspan
+         sodipodi:role="line"
+         x="133.75661"
+         y="493.21332"
+         id="tspan7372">&lt;/sampleattribute&gt;</tspan></text>
+    <flowRoot
+       xml:space="preserve"
+       id="flowRoot7374"
+       style="fill:black;stroke:none;stroke-opacity:1;stroke-width:1px;stroke-linejoin:miter;stroke-linecap:butt;fill-opacity:1;font-family:Bitstream Vera Sans;font-style:normal;font-weight:normal;font-size:40px"><flowRegion
+         id="flowRegion7376"><rect
+           id="rect7378"
+           width="245.71428"
+           height="134.28572"
+           x="131.42857"
+           y="295.21933" /></flowRegion><flowPara
+         id="flowPara7380" /></flowRoot>    <rect
+       style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:3;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="rect7396"
+       width="440"
+       height="240"
+       x="640"
+       y="52.362183" />
+    <text
+       xml:space="preserve"
+       style="font-size:40px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
+       x="680"
+       y="92.362183"
+       id="text7398"><tspan
+         sodipodi:role="line"
+         id="tspan7400"
+         x="680"
+         y="92.362183">Experiment 3</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:26.84586143px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
+       x="722.58917"
+       y="142.73651"
+       id="text7402"
+       transform="scale(0.88570382,1.1290456)"><tspan
+         sodipodi:role="line"
+         id="tspan7404"
+         x="722.58917"
+         y="142.73651">&lt;sampleattribute&gt;</tspan><tspan
+         sodipodi:role="line"
+         x="722.58917"
+         y="176.29384"
+         id="tspan7406">  &lt;category&gt;cell line&lt;/category&gt;</tspan><tspan
+         sodipodi:role="line"
+         x="722.58917"
+         y="209.85118"
+         id="tspan7408">  &lt;value&gt;T47D&lt;/value&gt;</tspan><tspan
+         sodipodi:role="line"
+         x="722.58917"
+         y="243.40849"
+         id="tspan7410">&lt;/sampleattribute&gt;</tspan></text>
+    <rect
+       style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:3;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="rect7396-4"
+       width="440"
+       height="240"
+       x="640"
+       y="332.36218" />
+    <text
+       xml:space="preserve"
+       style="font-size:40px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
+       x="680"
+       y="372.36218"
+       id="text7398-8"><tspan
+         sodipodi:role="line"
+         id="tspan7400-6"
+         x="680"
+         y="372.36218">Experiment 4</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:28.40950394px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
+       x="764.67651"
+       y="357.19064"
+       id="text7402-8"
+       transform="scale(0.83695519,1.1948071)"><tspan
+         sodipodi:role="line"
+         x="764.67651"
+         y="357.19064"
+         id="tspan7410-4" /></text>
+    <flowRoot
+       xml:space="preserve"
+       id="flowRoot7476"
+       style="fill:black;stroke:none;stroke-opacity:1;stroke-width:1px;stroke-linejoin:miter;stroke-linecap:butt;fill-opacity:1;font-family:Bitstream Vera Sans;font-style:normal;font-weight:normal;font-size:40px"><flowRegion
+         id="flowRegion7478"><rect
+           id="rect7480"
+           width="162.85715"
+           height="94.285713"
+           x="722.85712"
+           y="438.07648" /></flowRegion><flowPara
+         id="flowPara7482" /></flowRoot>    <text
+       xml:space="preserve"
+       style="font-size:24.4470005px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
+       x="793.49323"
+       y="360.07162"
+       id="text7495"
+       transform="scale(0.80656013,1.2398332)"><tspan
+         sodipodi:role="line"
+         id="tspan7497"
+         x="793.49323"
+         y="360.07162">&lt;sampleattribute&gt;</tspan><tspan
+         sodipodi:role="line"
+         x="793.49323"
+         y="390.63037"
+         id="tspan7505">  &lt;category&gt;ChIP-seq antibody&lt;/category&gt;</tspan><tspan
+         sodipodi:role="line"
+         x="793.49323"
+         y="421.18912"
+         id="tspan7501">  &lt;value&gt;HA-AGO1&lt;/value&gt;</tspan><tspan
+         sodipodi:role="line"
+         x="793.49323"
+         y="451.74786"
+         id="tspan7499">&lt;/sampleattribute&gt;</tspan></text>
+  </g>
+</svg>

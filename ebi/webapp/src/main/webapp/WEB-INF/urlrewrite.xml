@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE urlrewrite
+        PUBLIC "-//tuckey.org//DTD UrlRewrite 3.0//EN"
+        "http://tuckey.org/res/dtds/urlrewrite3.0.dtd">
+
+<urlrewrite>
+    <!-- show a list of experiments for googlebots -->
+    <rule>
+        <from>^/browse\.html$</from>
+        <condition name="user-agent">googlebot.*</condition>
+        <to type="forward">/servlets/query/html/experiments/browse-experiments-noajax</to>
+    </rule>
+
+    <!-- experiment by accession page -->
+    <rule>
+        <from>^/experiments/([eE]-\w{4}-\d+)$</from>
+        <to type="redirect">${interface.application.base.path}/browse.html?accession=$1&amp;detailedview=on</to>
+    </rule>
+    <!-- available files by accession page -->
+    <rule>
+        <from>^/files/([aAeE]-\w{4}-\d+)/?$</from>
+        <to type="forward">/servlets/query/html/experiments/browse-files?accession=$1</to>
+    </rule>
+    <rule>
+        <from>^/files/([aAeE]-\w{4}-\d+)/index.html$</from>
+        <to type="forward">/servlets/query/html/experiments/browse-files?accession=$1</to>
+    </rule>
+    <!-- files download support -->
+    <rule>
+        <from>^/files/([aAeE]-\w{4}-\d+)/(.+)$</from>
+        <to type="forward">/servlets/download/$1/$2</to>
+    </rule>
+    <!-- legacy download support -->
+    <rule>
+        <from>^/download/(.+)$</from>
+        <to type="forward">/servlets/download/$1</to>
+    </rule>
+    <!-- rss feeds support, old scheme -->
+    <rule>
+        <from>^/rss/experiments$</from>
+        <to type="forward">/servlets/query/xml/experiments/experiments-rss?queryversion=1</to>
+    </rule>
+
+    <!-- rss feeds support, current scheme -->
+    <rule>
+        <from>^/rss/v2/experiments$</from>
+        <to type="forward">/servlets/query/xml/experiments/experiments-rss</to>
+    </rule>
+
+    <!-- rest api support -->
+    <rule>
+        <from>^/xml/experiments$</from>
+        <to type="forward">/servlets/query/xml/experiments/experiments?queryversion=1</to>
+    </rule>
+    <rule>
+        <from>^/xml/experiments/([eE]-\w{4}-\d+)$</from>
+        <to type="forward">/servlets/query/xml/experiments/experiments?accession=$1</to>
+    </rule>
+    <rule>
+        <from>^/xml/files$</from>
+        <to type="forward">/servlets/query/xml/experiments/files?queryversion=1</to>
+    </rule>
+    <rule>
+        <from>^/xml/files/([eE]-\w{4}-\d+)$</from>
+        <to type="forward">/servlets/query/xml/experiments/files?accession=$1</to>
+    </rule>
+
+    <!-- rest api v2 support -->
+    <rule>
+        <from>^/xml/v2/experiments$</from>
+        <to type="forward">/servlets/query/xml/experiments/experiments</to>
+    </rule>
+    <rule>
+        <from>^/xml/v2/experiments/([eE]-\w{4}-\d+)$</from>
+        <to type="forward">/servlets/query/xml/experiments/experiments?accession=$1</to>
+    </rule>
+    <rule>
+        <from>^/xml/v2/files$</from>
+        <to type="forward">/servlets/query/xml/experiments/files</to>
+    </rule>
+    <rule>
+        <from>^/xml/v2/files/([eE]-\w{4}-\d+)$</from>
+        <to type="forward">/servlets/query/xml/experiments/files?accession=$1</to>
+    </rule>
+    <rule>
+        <from>^/xml/v2/experiments/ebeye$</from>
+        <to type="forward">/servlets/query/xml/experiments/experiments-ebeye</to>
+    </rule>
+    <!-- json-flavored rest api -->
+    <rule>
+        <from>^/json/v2/experiments$</from>
+        <to type="forward">/servlets/query/json/experiments/experiments</to>
+    </rule>
+    <rule>
+        <from>^/json/v2/experiments/([eE]-\w{4}-\d+)$</from>
+        <to type="forward">/servlets/query/json/experiments/experiments?accession=$1</to>
+    </rule>
+
+    <!-- api for nils -->
+    <rule>
+        <from>^/json/v2/efotree$</from>
+        <to type="forward">/servlets/lookup/efotreejson</to>
+    </rule>
+    <rule>
+        <from>^/json/v2/efodict$</from>
+        <to type="forward">/servlets/lookup/efodictjson</to>
+    </rule>
+    <!-- search results export in tab format -->
+    <rule>
+        <from>^/ArrayExpress-Experiments\.xls$</from>
+        <to type="forward">/servlets/query/xls/experiments/experiments</to>
+    </rule>
+    <rule>
+        <from>^/ArrayExpress-Experiments\.txt$</from>
+        <to type="forward">/servlets/query/tab/experiments/experiments</to>
+    </rule>
+    <!-- print-friendly layout for the experiments -->
+    <rule>
+        <from>^/browse\.printer\.html$</from>
+        <to type="forward">/servlets/query/html/experiments/browse-experiments-printer</to>
+    </rule>
+    <!-- redirects to some pages at www.ebi.ac.uk (via proxy servlet) -->
+    <rule>
+        <from>^/ae-news.xml</from>
+        <to type="forward">/servlets/proxy/microarray-srv/ae/ae-main-news.xml</to>
+    </rule>
+    <rule>
+        <from>^/ae-links.xml</from>
+        <to type="forward">/servlets/proxy/microarray-srv/ae/ae-main-links.xml</to>
+    </rule>
+    <rule>
+        <from>^/aew-gene-stats.xml</from>
+        <to type="forward">/servlets/proxy/microarray-as/solr_gene/admin/stats.jsp</to>
+    </rule>
+    <rule>
+        <from>^/aew-exp-stats.xml</from>
+        <to type="forward">/servlets/proxy/microarray-as/solr_exp/admin/stats.jsp</to>
+    </rule>
+    <rule>
+        <from>^/atlas_list-species.html</from>
+        <to type="forward">/servlets/proxy/microarray-as/atlas/list-species.jsp</to>
+    </rule>
+    <rule>
+        <from>^/atlas_stats.txt</from>
+        <to type="forward">/servlets/proxy/microarray-as/atlas/stats.jsp</to>
+    </rule>
+    <!-- hiding browse helpers behind innocent names -->
+    <rule>
+        <from>^/browse-table.html</from>
+        <to type="forward">/servlets/query/html/experiments/browse-experiments</to>
+    </rule>
+    <rule>
+        <from>^/species-list.html</from>
+        <to type="forward">/servlets/lookup/species</to>
+    </rule>
+    <rule>
+        <from>^/arrays-list.html</from>
+        <to type="forward">/servlets/lookup/arrays</to>
+    </rule>
+    <rule>
+        <from>^/expdesign-list.html</from>
+        <to type="forward">/servlets/lookup/expdesign</to>
+    </rule>
+    <rule>
+        <from>^/exptech-list.html</from>
+        <to type="forward">/servlets/lookup/exptech</to>
+    </rule>
+    <rule>
+        <from>^/keywords.txt</from>
+        <to type="forward">/servlets/lookup/keywords</to>
+    </rule>
+    <rule>
+        <from>^/efotree.txt</from>
+        <to type="forward">/servlets/lookup/efotree</to>
+    </rule>
+    <rule>
+        <from>^/ae-stats.xml</from>
+        <to type="forward">/servlets/query/xml/experiments/stats</to>
+    </rule>
+    <rule>
+        <from>^/verify-login.txt</from>
+        <to type="forward">/servlets/control/verify-login</to>
+    </rule>
+    <!-- control links -->
+    <rule>
+        <from>^/reload-atlas-info</from>
+        <to type="forward">/servlets/control/reload-atlas-info</to>
+    </rule>
+    <rule>
+        <from>^/reload-xml</from>
+        <to type="forward">/servlets/control/reload-xml</to>
+    </rule>
+    <rule>
+        <from>^/reload-xml/(.+)</from>
+        <to type="forward">/servlets/control/reload-xml/$1</to>
+    </rule>
+    <rule>
+        <from>^/rescan-ftp</from>
+        <to type="forward">/servlets/control/rescan-files</to>
+    </rule>
+    <rule>
+        <from>^/rescan-ftp/(.+)</from>
+        <to type="forward">/servlets/control/rescan-files/$1</to>
+    </rule>
+    <!-- experimental noajax browse interface -->
+    <rule>
+        <from>^/browse-noajax.html$</from>
+        <to type="forward">/servlets/query/html/experiments/browse-experiments-noajax?cache=true</to>
+    </rule>
+    <rule>
+        <from>^/browse-exist.html$</from>
+        <to type="forward">/assets/queries/test.xql</to>
+    </rule>
+
+</urlrewrite>

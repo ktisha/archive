@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <index id="experiments" location="${sys:java.io.tmpdir}/index" defaultAnalyzer="uk.ac.ebi.arrayexpress.utils.search.AttributeFieldAnalyzer">
+        <document path="/experiments/experiment" defaultField="keywords">
+            <field name="keywords" type="string" path="string-join(.//text(), ' ')" analyze="true" analyzer="uk.ac.ebi.arrayexpress.utils.search.ExperimentTextAnalyzer" store="false" escape="false"/>
+            <field name="accession" title="Accession" type="string" path="accession | secondaryaccession" analyze="true" store="false" escape="true"/>
+            <field name="date" title="Release Date" type="string" path="releasedate" analyze="true" store="false" escape="true"/>
+            <field name="species" title="Species" type="string" path="species" analyze="true" store="false" escape="true"/>
+            <field name="array" title="Array" type="string" path="arraydesign/id | arraydesign/accession | arraydesign/name" analyze="true" store="false" escape="true"/>
+            <field name="exptype" title="Experiment Type" type="string" path="experimenttype" analyze="true" store="false" escape="true" forcePhraseQuery="true"/>
+            <field name="expdesign" title="Experiment Design" type="string" path="experimentdesign" analyze="true" store="false" escape="true"/>
+            <field name="ef" title="Experimental Factor" type="string" path="experimentalfactor/name" analyze="true" store="false" escape="true"/>
+            <field name="efv" title="Experimental Factor Value" type="string" path="experimentalfactor/value" analyze="true" store="false" escape="true"/>
+            <field name="sa" title="Sample Attribute Value" type="string" path="sampleattribute/value" analyze="true" store="false" escape="true"/>
+            <field name="pmid" title="PubMed ID" type="string" path="bibliography/accession" analyze="false" store="false" escape="true"/>
+            <field name="userid" type="string" path="user" analyze="false" store="false" escape="true"/>
+            <field name="gxa" title="Presence in Gene Expression Atlas" type="string" path="@loadedinatlas" analyze="false" store="false" escape="true"/>
+            <!-- numeric fields -->
+            <field name="assaycount" title="Number of Assays" type="integer" path="(if (assays castable as xs:integer) then assays else 0) cast as xs:integer" />
+            <field name="samplecount" title="Number of Samples" type="integer" path="(if (samples castable as xs:integer) then samples else 0) cast as xs:integer" />
+            <field name="rawcount" type="integer" path="(if (rawdatafiles castable as xs:integer) then rawdatafiles else 0) cast as xs:integer" />
+            <field name="fgemcount" type="integer" path="(if (fgemdatafiles castable as xs:integer) then fgemdatafiles else 0) cast as xs:integer" />
+            <field name="efcount"  title="Number of Experimental Factors" type="integer" path="count(distinct-values(experimentalfactor/name, 'http://saxon.sf.net/collation?ignore-case=yes'))" />
+            <field name="sacount" title="Number of Sample Attributes" type="integer" path="count(distinct-values(sampleattribute/category, 'http://saxon.sf.net/collation?ignore-case=yes'))" />
+            <field name="miamescore" title="MIAME Score" type="integer" path="(if (miamescores/overallscore castable as xs:integer) then miamescores/overallscore else 0) cast as xs:integer" />
+        </document>
+    </index>
+    <index id="protocols" location="${sys:java.io.tmpdir}/index" defaultAnalyzer="uk.ac.ebi.arrayexpress.utils.search.AttributeFieldAnalyzer">
+        <document path="/protocols/protocol" defaultField="keywords">
+            <field name="keywords" type="string" path="string-join(.//text(), ' ')" analyze="true" store="false" escape="false"/>
+        </document>
+    </index>
+    <index id="arrays" location="${sys:java.io.tmpdir}/index" defaultAnalyzer="uk.ac.ebi.arrayexpress.utils.search.AttributeFieldAnalyzer">
+        <document path="/arrays/array" defaultField="keywords">
+            <field name="keywords" type="string" path="string-join(.//text(), ' ')" analyze="true" store="false" escape="false"/>
+        </document>
+    </index>
+</configuration>

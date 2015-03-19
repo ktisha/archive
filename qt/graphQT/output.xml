@@ -1,0 +1,8 @@
+<graph>
+    <vertex value="A"/>
+    <vertex value="B"/>
+    <vertex value="C"/>
+    <edge vertex1="A" vertex2="B" value="AB"/>
+    <edge vertex1="A" vertex2="C" value="AC"/>
+    <edge vertex1="B" vertex2="C" value="BC"/>
+</graph>

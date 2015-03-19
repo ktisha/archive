@@ -1,0 +1,146 @@
+------------------------------------
+Известно, что когда биологи работающие с ДНК проводят эксперимент они потом публикуют результаты и описание в базу данных Array Express. Это свободная база данных и доступ к ней есть у всех. Таким образом, другие люди работающие с ДНК могут получить информацию обо всех проведенных экспериментах. Эта база данных хранит большое количество информации об экспериментах. Информация в базе упорядоченна. Хранится такая информация как организм над которым проводили эксперимент, набор исследовавшихся генов, описание эксперимента, id публикации на основе этого эксперимента, и т.д.
+Все это нужно для того, чтобы облегчить задачу ученым, чтобы можно было сравнивать разные эксперименты. До настоящего момента, для человека исследующего базу данных было доступно немного возможностей для поиска. 
+Итак, допустим я биолог. Я ищу информацию в базе данных. Найдя интересущий меня эксперимент, мне было бы интересно посмотреть на похожие. Но для этого мне вручную нужно посмотреть на ссылки из публикации, просмотреть аттрибуты эксперимента и сделать новый поиск или каким-то еще образом узнать похожие эксперименты.
+Проект similarity призван облегчить поиск интересующих экспериментов ученым, сократить время на этот поиск, чтобы оставить его для науки =)
+Итак, как уже стало понятно, мы занимаемся предоставлением информации о похожих экспериментах.
+
+Для того, чтобы найти похожие эксперименты есть несколько возможностей.
+Во-первых, мы можем использовать аттрибуты экспериментов и искать другие эксперименты с теми же аттрибутами. Во-вторых, можно использовать онтологию экспериментальных факторов. И в третьих, можно использовать связь экспериментов через публикации.
+
+Первая возможность -- использовать аттрибуты экспериментов.
+Для того, чтобы лучше понять, что такое аттрибуты -- посмотрим на пример.
+Внутри аттрибутов порой хранится мусор, обрывки информации, неважная информация и т.д.
+Для того, чтобы отсеять ненужную информацию -- мы использовали проект zooma (спасибо Тони). Как уже некоторые здесь знают, что такое zooma. Я лишь коротко расскажу о тех возможностях, которые мы использовали. Zooma позволяет по входной строке и известной онтологии получить отображение этой строки в узел онтологии если это возможно. 
+Таким образом, отсеяв ненужную информацию мы можем производить поиск экспериментов с теми же аттрибутами, что и у заданного.
+
+Следующая возможность -- использование самой онтологии.
+Для начала, немного о том, что из себя представляет онтология экспериментальных факторов.
+В нашем случае, онтология -- это граф, отображающий зависимости между ключевыми  понятиями в биологии. (картинка про рак).
+Таким образом, становится понятно, что чем ближе эксперименты расположены в онтологии -- тем более они похожи.
+Для того, чтобы определить насколько близко эксперименты находятся в онтологии -- мы проводим препроцессинг. он заключается в том, что мы считаем расстояния между всеми узлами в онтологии и сохраняем это в специальную структуру данных.
+После того, как мы получили отображение аттрибутов экспериментов в узлы онтологии, мы можем узнать какие узлы находятся близко к данному, а затем и какие эксперименты находятся в этих узлах.
+
+И еще одна возможность для определения близости экспериментов -- связь через публикации.
+Публикации о результатах многих экспериментов хранятсяв pubmed.
+Для тех экспериментов, которым соответствуют публикации в pubmed мы также можем найти похожие. 
+Сайт, занимающийся публикациями ( ссылку и правильное название), предоставляет удобные xml api для навигации по публикациям. Например, предоставляется список публикаций, которые ссылаются на данную, так же список похожих публикаций, на основе частотного анализа текста публикаций and so on.
+Мы обрабатываем всю эту информацию и используем для того, чтобы указать похожие эксперименты.
+
+-------
+((((Теперь о том как круто, модульно и параллельно все.
+    Как все легко настраивать.
+    ?Можно еще про то, что у нас xml база данных.
+    Показать где все уже работает (ссылку) ))))))
+    
+Конечно, реализованы еще не все возможности для поиска похожих экспериментов. Например, можно проводить частотный анализ описания эксперимента. Насколько я понимаю, это был проект прошлого года. И многие другие возможности.
+Эти возможности легко добавить в имеющуюся систему благодаря ее модульности.
+Достаточно только реализовать нужный интерфейс и добавить новую задачу в scheduler.
+Так как вся система разрабатывалась для параллельной работы (так как используется большое количество вычислений) мы используем стандартный scheduler -- quartz.
+Так же очень просто отключить ненужную возможность. Например, если нас перестанет интересовать связь экспериментов через публикации.
+
+Так же существует достаточно много настроек -- таких как:
+- количество похожих экспериментов, которые хранятся в базе
+- сколько ближайших узлов в онтологии использовать
+- использовать только ближайшие публикации или и через одну
+- и так далее
+
+Таким образом, можно подобрать наиболее удобную конфигурацию.
+
+Работающую версию можно посмотреть здесь (ссылка). Как видно, пока что мы не занимались тем как сделать все красиво, но надеюсь пара css все исправит =)
+
+Спасибо Николаю Колесникову, который руководил работой и предлагал интересные решения. Во время разработки этого проекта Array Express переходил на новую базу данных -- xml eXist. И у Николая было много работы, связанной с этим переходом. Однако, у него всегда находилось время обсудить similarity.
+Отдельное спасибо -- Тони за zoom'у и за терпение =). Так как zooma развивалась в процессе написания моего проекта -- у меня было много вопросов и Тони терпеливо все объяснял.
+Ну и Хелен -- за возможность пожить и поработать в Англии.
+
+
+---------------------------------------------
+--- slide 1 ---
+Hi,
+thank you for coming.
+My name is Ekaterina Tuzova and I was summer student here.
+Today I'm going to present results of my work.
+Name of my project is "semantic similarity in Array Express Archive ([ˈ:kaɪv])." 
+
+
+--- slide 2 ---
+
+Here is short plan of my presentation. I'm going to speak about goals of the project, then about solutions. And finally i'll say few words about the project architecture.
+
+Let's start.
+
+I think, most of you know about Array Express database but I want to remind briefly the main idea.
+
+--- slide 3 --- 
+
+All biologists who work with the DNA and do some research in this field should publish their results and experiments description in ArrayExpress database.
+Array Express is database with free access to data, so all scientists can search for interesting results and compare experiments. Because of it's not cheap to do some experiment connected with DNA in your own lab and for interesting results you need a lot of information. 
+Array Express stores big amount of different information such as experiments description, id of publication, organism and so on. All information are well-ordered in database. And the main idea to provide easy access to experiments and possibility to compare them. But till recently it was really few opportunities for search. To be honest you could only search for some experiment in database using some parameters. And if you wanted to see similar experiments - you should somehow find it by yourself. It takes a lot of time because of, for instance, you need to look at experiment attributes and do another search or you should look throw the publication references and do another search for it or somehow else.
+
+--- slide 4 ---
+
+Similarity project aims to do it for you. And we want to save biologists time for real science.
+
+So as you can already understood we wanted to provide information about similar experiments.
+
+--- slide 5 ---
+
+Let's look for possibilities for it.
+
+There are some possibilities to search similar experiments in database.
+First of all, we can look for experiments with the same attributes. Also we can use Ontology Of Experimental Factor. And another possibility is to use publication references.
+
+Well, let's have a look for it.
+
+--- slide 6 ---
+
+As I said -- firs possibility is to search experiments with the same attributes.
+There are examples of possible attributes for experiment. As we can see -- sometimes there are a lot of crap in this field. In our project we used zooma. As some of you already knew, zooma is the project developed by Tony. I'll just briefly tell about possibilities provided by zooma we used in our project. 
+
+--- slide 7 ---
+
+Zooma can map string value to node of  given ontology. So we put string value and type of ontology  to the input of zooma and we get node of that ontology as output. And In our project  we do that mapping for all experiments and then we just find experiments which mapped to the same node.
+
+--- slide 8 ---
+
+Another possibility is to use ontology information.
+To begin with I want to give you some information about Ontology of experimental factor. In our case, ontology is a huge graph contains dependencies and connections between key concepts in biology.
+For instance, lets have a look to this picture.
+So we can assume that two experiments are similar if they mapped into close nodes in ontology.
+To calculate similarity we need do some preprocessing. The idea of preprocessing is  to calculate distances between each nodes in ontology and save it into special data structure with easy access to that information.
+When we did the preprocessing we can find similar experiments based on distances in ontology. We can find nearest nodes in ontology and then find experiments mapped to that nodes. There are a lot of possibilities to adjust that kind of similarity such as we can specify how many nearest nodes we want to use or maximum length of the path to node.
+
+--- slide 9 ---
+
+And another possibility to find similar experiments I mentioned is to use articles in PubMed database. This site provides convenient way to navigation throw citation database using xml API. For instance, it provide links to referenced articles and link to similar articles. They calculate similarity for articles based on frequency analysis of text.
+
+--- slide 10 ---
+
+Tht's how it looks inside.
+
+We process that information and use it to search similar experiments.
+
+--- slide 11 ---
+
+In conclusion I want to speak a little about architecture of the project.
+We understand that there are a lot of another possibilities to find similar experiments. For instance, you can use frequency analysis of publication text to find similar experiments or anything else. But we couldn't do everything in finite time and we tried to make easy way to add functionality.
+
+There are a lot of calculations in our project so we used multithreading techniques namely Quartz. And all mentioned possibilities to search similar experiments are stand-alone module and you can add your own. 
+All you need to add functionality is to implement few interfaces and learn the main data structure. 
+
+And another important thing is that there are a lot of ways to adjust our project.
+Such as:
+- amount of similar experiments to store in database
+- amount of nearest nodes in ontology to use
+- some properties for publication references
+
+So you can find proper configuration.
+It's link to working system. It's in a testing mode now.
+
+
+--- slide 15 ---
+
+Finnaly, I want to thank Nikolay Kolesnikov who supervised my work and gave me a lot of things to think of. Also i want to thank Tony for his zooma and for patience. Because I had a lot of questions about it =)
+And of cource i want to thank EBI for possibility to work here.
+
+Thank you.

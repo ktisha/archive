@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="744.09448819"
+   height="1052.3622047"
+   id="svg9169"
+   version="1.1"
+   inkscape:version="0.47 r22583"
+   sodipodi:docname="pubMed.svg">
+  <defs
+     id="defs9171">
+    <inkscape:perspective
+       sodipodi:type="inkscape:persp3d"
+       inkscape:vp_x="0 : 526.18109 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_z="744.09448 : 526.18109 : 1"
+       inkscape:persp3d-origin="372.04724 : 350.78739 : 1"
+       id="perspective9177" />
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.35"
+     inkscape:cx="253.12775"
+     inkscape:cy="554.45557"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="591"
+     inkscape:window-height="481"
+     inkscape:window-x="279"
+     inkscape:window-y="24"
+     inkscape:window-maximized="0" />
+  <metadata
+     id="metadata9174">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <text
+       xml:space="preserve"
+       style="font-size:24.69402504px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
+       x="-16.290812"
+       y="192.21129"
+       id="text9179"
+       transform="scale(1.0523021,0.95029743)"><tspan
+         sodipodi:role="line"
+         id="tspan9181"
+         x="-16.290812"
+         y="192.21129">&lt;eLinkResult&gt;</tspan><tspan
+         sodipodi:role="line"
+         x="-16.290812"
+         y="223.07883"
+         id="tspan9183">   &lt;LinkSet&gt;</tspan><tspan
+         sodipodi:role="line"
+         x="-16.290812"
+         y="253.94635"
+         id="tspan9185">   &lt;DbFrom&gt;pubmed&lt;/DbFrom&gt;</tspan><tspan
+         sodipodi:role="line"
+         x="-16.290812"
+         y="284.81387"
+         id="tspan9187">   &lt;IdList&gt;</tspan><tspan
+         sodipodi:role="line"
+         x="-16.290812"
+         y="315.68143"
+         id="tspan9189">      &lt;Id&gt;1234&lt;/Id&gt;</tspan><tspan
+         sodipodi:role="line"
+         x="-16.290812"
+         y="346.54895"
+         id="tspan9191">   &lt;/IdList&gt;</tspan><tspan
+         sodipodi:role="line"
+         x="-16.290812"
+         y="593.4892"
+         id="tspan9215">   &lt;LinkSetDb&gt;</tspan><tspan
+         sodipodi:role="line"
+         x="-16.290812"
+         y="716.95935"
+         id="tspan9217">      &lt;DbTo&gt;pubmed&lt;/DbTo&gt;</tspan><tspan
+         sodipodi:role="line"
+         x="-16.290812"
+         y="747.82684"
+         id="tspan9219">      &lt;LinkName&gt;pubmed_pubmed_citedin&lt;/LinkName&gt;</tspan><tspan
+         sodipodi:role="line"
+         x="-16.290812"
+         y="778.6944"
+         id="tspan9221">      &lt;Link&gt;</tspan><tspan
+         sodipodi:role="line"
+         x="-16.290812"
+         y="809.56189"
+         id="tspan9225">         &lt;Id&gt;1260222&lt;/Id&gt;</tspan><tspan
+         sodipodi:role="line"
+         x="-16.290812"
+         y="840.42944"
+         id="tspan9227">      &lt;/Link&gt;</tspan><tspan
+         sodipodi:role="line"
+         x="-16.290812"
+         y="871.297"
+         id="tspan9229">      &lt;Link&gt;</tspan><tspan
+         sodipodi:role="line"
+         x="-16.290812"
+         y="902.16449"
+         id="tspan9231">         &lt;Id&gt;577182&lt;/Id&gt;</tspan><tspan
+         sodipodi:role="line"
+         x="-16.290812"
+         y="933.03204"
+         id="tspan9233">      &lt;/Link&gt;</tspan><tspan
+         sodipodi:role="line"
+         x="-16.290812"
+         y="963.8996"
+         id="tspan9235">   &lt;/LinkSetDb&gt;</tspan><tspan
+         sodipodi:role="line"
+         x="-16.290812"
+         y="994.76709"
+         id="tspan9281">&lt;/eLinkResult&gt;  </tspan><tspan
+         sodipodi:role="line"
+         x="-16.290812"
+         y="1025.6346"
+         id="tspan9283" /></text>
+  </g>
+</svg>

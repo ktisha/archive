@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+       http://www.springframework.org/schema/beans 
+       http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+  <!-- Wiring for zooma, preconfiguring all mapping systems -->
+
+  <!-- configurator bean, loads source and ontology ranking config -->
+  <bean id="configurator"
+        class="uk.ac.ebi.microarray.zooma.utils.Configurator"
+        init-method="loadConfiguration" />
+
+  <!-- config objects extracted from configurator -->
+  <bean id="sources"
+        factory-bean="configurator"
+        factory-method="getSourcesConfig" />
+
+  <bean id="ontologies"
+        factory-bean="configurator"
+        factory-method="getOntologiesConfig" />
+
+  <bean id="rejectedOntologies"
+        factory-bean="configurator"
+        factory-method="getRejectedOntologiesConfig" />
+
+  <!-- source ranker, acquired from configurator -->
+  <bean id="sourceRanker"
+        class="uk.ac.ebi.microarray.zooma.calc.SourceRanker">
+    <constructor-arg ref="sources" />
+  </bean>
+
+  <!-- ontology ranker, again from configurator -->
+  <bean id="ontologyRanker"
+        class="uk.ac.ebi.microarray.zooma.calc.OntologyRanker">
+    <constructor-arg ref="ontologies" />
+    <constructor-arg ref="rejectedOntologies" />
+  </bean>
+
+  <!-- hypothesis factory -->
+  <bean id="hypothesisFactory"
+        class="uk.ac.ebi.microarray.zooma.hypothesis.TrackedHypothesisFactory" />
+
+  <!-- retrievers -->
+  <!--
+   *** NOTE ***
+
+   OntologyRetrievers are constructed on-the-fly from user specified options,
+   and never pre-instantiated here.
+
+   As a consequence, it is necessary to build a formulator template and add new
+   retrievers when they are constructed from user-specified parameters
+
+   ************
+   -->
+
+  <!-- ontology mapping calculator -->
+  <bean id="calculator"
+        class="uk.ac.ebi.microarray.zooma.calc.RankingBasedCalculator">
+    <property name="sourceRanker" ref="sourceRanker" />
+    <property name="ontologyRanker" ref="ontologyRanker" />
+  </bean>
+
+  <!-- ontology mapping evaluator -->
+  <bean id="evaluator"
+        class="uk.ac.ebi.microarray.zooma.eval.DefaultMappingEvaluator">
+    <property name="ontologyMappingCalculator" ref="calculator" />
+  </bean>
+
+  <!-- all required formulator beans -->
+  <bean id="nullHypothesisFormulator"
+        class="uk.ac.ebi.microarray.zooma.formulate.NoPossibleMappingFormulator">
+    <property name="ontologyMappingHypothesisFactory"
+              ref="hypothesisFactory" />
+  </bean>
+
+  <!-- this is a template, because it needs retrievers adding -->
+  <bean id="formulator"
+        class="uk.ac.ebi.microarray.zooma.formulate.ContextSensitiveMappingFormulator">
+    <property name="ontologyMappingHypothesisFactory" ref="hypothesisFactory" />
+  </bean>
+
+  <!-- mappers -->
+  <bean id="textMapper"
+        class="uk.ac.ebi.tuzova.mapping.AEOntologyMapper">
+    <property name="nullHypothesisFormulator" ref="nullHypothesisFormulator" />
+    <property name="alternativeHypothesisFormulator" ref="formulator" />
+    <property name="evaluator" ref="evaluator" />
+  </bean>
+
+</beans>

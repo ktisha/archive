@@ -1,0 +1,6 @@
+# listing of properties in the atlas that should not be mapped
+individual
+replicate
+genotype
+
+

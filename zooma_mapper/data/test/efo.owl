@@ -1,0 +1,250 @@
+<?xml version="1.0"?>
+<rdf:RDF
+    xmlns:uo="http://purl.org/obo/owl/UO#"
+    xmlns:chebi="http://www.ebi.ac.uk/chebi/searchId.do;?chebiId="
+    xmlns:protege="http://protege.stanford.edu/plugins/owl/protege#"
+    xmlns:obo="http://purl.obolibrary.org/obo/"
+    xmlns:xsp="http://www.owl-ontologies.com/2005/08/07/xsp.owl#"
+    xmlns:NCBITaxon="http://purl.org/obo/owl/NCBITaxon#"
+    xmlns:owl2xml="http://www.w3.org/2006/12/owl2-xml#"
+    xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:snap="http://www.ifomis.org/bfo/1.1/snap#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:efo="http://www.ebi.ac.uk/efo/"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+    xmlns:owl2="http://www.w3.org/2006/12/owl2#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns="http://www.ebi.ac.uk/efo/"
+    xmlns:span="http://www.ifomis.org/bfo/1.1/span#"
+  xml:base="http://www.ebi.ac.uk/efo/">
+  <owl:Ontology rdf:about="">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Bioportal mappings to Phenotypic quality (PATO) ver1.221</rdfs:comment>
+    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >2.4</owl:versionInfo>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Bioportal mappings to BRENDA tissue / enzyme source (BTO) ver1.3</rdfs:comment>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Bioportal mappings to Microarray experimental conditions (MO) ver1.3.1.1</rdfs:comment>
+    <efo:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Tomasz Adamusiak</efo:creator>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Bioportal mappings to Zebrafish anatomy and development (ZFA) ver1.27</rdfs:comment>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Bioportal mappings to Units of measurement (UO) ver1.27</rdfs:comment>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Bioportal mappings to SNOMED Clinical Terms (SNOMEDCT) ver2009_07_31</rdfs:comment>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Bioportal mappings to NCBI organismal classification (null) ver1.2</rdfs:comment>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Bioportal mappings to MGED Ontology (MO) ver1.3.1.1</rdfs:comment>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Bioportal mappings to Human disease (DOID) ver1.192</rdfs:comment>
+    <efo:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Helen Parkinson</efo:creator>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Bioportal mappings to International Classification of Diseases (ICD-9) ver9</rdfs:comment>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Mappings:The Arabidopsis Information Resource (TAIR)</rdfs:comment>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Bioportal mappings to Foundational Model of Anatomy (FMA) ver3.0</rdfs:comment>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Bioportal mappings to Chemical entities of biological interest (CHEBI) ver1.66</rdfs:comment>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Bioportal mappings to Minimal anatomical terminology (MAT) ver1.1</rdfs:comment>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Mappings to Plant structure (PO)</rdfs:comment>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Mappings: CRISP Thesaurus Version 2.5.2.0</rdfs:comment>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Bioportal mappings to Malaria Ontology (IDOMAL) ver1.1</rdfs:comment>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Date: 1st July 2010:</rdfs:comment>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Bioportal mappings to Medical Subject Headings (MSH) ver2010_2009_08_17</rdfs:comment>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Bioportal mappings to Mosquito gross anatomy (TGMA) ver1.10</rdfs:comment>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Bioportal mappings to Gene Ontology (GO) ver1.886</rdfs:comment>
+    <efo:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >James Malone</efo:creator>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Mappings: The Jackson Lab</rdfs:comment>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Bioportal mappings to Teleost anatomy and development (TAO) ver1.158</rdfs:comment>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Bioportal mappings to NCI Thesaurus (NCIt) ver10.01</rdfs:comment>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Bioportal mappings to Drosophila gross anatomy (FBbt) ver1.33</rdfs:comment>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Bioportal mappings to Mammalian phenotype (MP) ver1.347</rdfs:comment>
+    <efo:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Ele Holloway</efo:creator>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Bioportal mappings to Ontology for Biomedical Investigations (OBI) ver2009-11-06 Philly (aka version 1.0) Release Candidate</rdfs:comment>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Bioportal mappings to NIFSTD (nif) ver1.8</rdfs:comment>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Bioportal mappings to Cell type (CL) ver1.43</rdfs:comment>
+  </owl:Ontology>
+  <owl:Class rdf:about="http://www.ebi.ac.uk/efo/EFO_0001088">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.geneontology.org/formats/oboInOwl#ObsoleteClass"/>
+    </rdfs:subClassOf>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >obsolete_Beas2B</rdfs:label>
+    <efo:reason_for_obsolescence rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Duplication, use EFO_0001089 instead</efo:reason_for_obsolescence>
+    <efo:definition_editor rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >James Malone</efo:definition_editor>
+    <efo:organizational_class rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >true</efo:organizational_class>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.ebi.ac.uk/efo/EFO_0001124">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.ebi.ac.uk/efo/EFO_0000322"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="http://www.obofoundry.org/ro/ro.owl#derives_from"/>
+        </owl:onProperty>
+        <owl:someValuesFrom>
+          <owl:Class rdf:about="http://www.ebi.ac.uk/efo/EFO_0000101"/>
+        </owl:someValuesFrom>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <efo:definition_editor rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >James Malone</efo:definition_editor>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >GM11992</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.ebi.ac.uk/efo/EFO_0001261">
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="http://www.obofoundry.org/ro/ro.owl#derives_from"/>
+        </owl:onProperty>
+        <owl:someValuesFrom>
+          <owl:Class rdf:about="http://purl.org/obo/owl/NCBITaxon#NCBITaxon_7955"/>
+        </owl:someValuesFrom>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.ebi.ac.uk/efo/EFO_0000322"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom>
+          <owl:Class rdf:about="http://www.ebi.ac.uk/efo/EFO_0000496"/>
+        </owl:someValuesFrom>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="http://www.obofoundry.org/ro/ro.owl#derives_from"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <efo:definition_editor rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >James Malone</efo:definition_editor>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >ZF4</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/UO#UO:0000064">
+    <efo:EFO_URI rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >http://www.ebi.ac.uk/efo/EFO_0001811</efo:EFO_URI>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://purl.org/obo/owl/UO#UO:0000061"/>
+    </rdfs:subClassOf>
+    <efo:definition_citation rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >MO_740</efo:definition_citation>
+    <efo:alternative_term rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >uM</efo:alternative_term>
+    <efo:definition_editor rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >James Malone</efo:definition_editor>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >micromolar</rdfs:label>
+    <efo:organizational_class rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >true</efo:organizational_class>
+    <efo:alternative_term rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >µM</efo:alternative_term>
+    <efo:definition_editor rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Tomasz Adamusiak</efo:definition_editor>
+    <efo:definition_editor rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Jie Zheng</efo:definition_editor>
+    <efo:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >A unit of molarity which is equal to one millionth of a molar or 10^[-6] M.</efo:definition>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.ebi.ac.uk/efo/EFO_0000862">
+    <efo:definition_citation rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >FMAID:13890</efo:definition_citation>
+    <efo:definition_citation rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >XAO:0000167</efo:definition_citation>
+    <efo:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Any of usually four small endocrine glands that are adjacent to or embedded in the thyroid gland and produce parathyroid hormone.</efo:definition>
+    <efo:alternative_term rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >parathyroid hormone secreting cell</efo:alternative_term>
+    <efo:bioportal_provenance rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >chief cell[accessedResource: TAO:0009207][accessDate: 10-05-2010]</efo:bioportal_provenance>
+    <efo:alternative_term rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >chief cell</efo:alternative_term>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >parathyroid</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.ebi.ac.uk/efo/EFO_0000797"/>
+    </rdfs:subClassOf>
+    <efo:definition_citation rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >MA:0000128</efo:definition_citation>
+    <efo:definition_citation rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >EV:0100134</efo:definition_citation>
+    <efo:definition_editor rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >James Malone</efo:definition_editor>
+    <efo:bioportal_provenance rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Any of usually four small endocrine glands that are adjacent to or embedded in the thyroid gland and produce parathyroid hormone.[accessedResource: BTO:0000997][accessDate: 10-05-2010]</efo:bioportal_provenance>
+    <efo:definition_citation rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >TAO:0009207</efo:definition_citation>
+    <efo:definition_citation rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >EHDAA:3864</efo:definition_citation>
+    <efo:bioportal_provenance rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >parathyroid hormone secreting cell[accessedResource: TAO:0009207][accessDate: 10-05-2010]</efo:bioportal_provenance>
+    <efo:definition_citation rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >BTO:0000997</efo:definition_citation>
+    <efo:definition_citation rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >EHDAA:3870</efo:definition_citation>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.ebi.ac.uk/efo/EFO_0002857">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.ebi.ac.uk/efo/EFO_0000322"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="http://purl.org/obo/owl/OBO_REL#bearer_of"/>
+        </owl:onProperty>
+        <owl:someValuesFrom>
+          <owl:Class rdf:about="http://www.ebi.ac.uk/efo/EFO_0000621"/>
+        </owl:someValuesFrom>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="http://www.obofoundry.org/ro/ro.owl#derives_from"/>
+        </owl:onProperty>
+        <owl:someValuesFrom>
+          <owl:Class rdf:about="http://purl.org/obo/owl/NCBITaxon#NCBITaxon_9606"/>
+        </owl:someValuesFrom>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <efo:definition_editor rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Ele Holloway</efo:definition_editor>
+    <efo:definition_editor rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >James Malone</efo:definition_editor>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >SHEP-SF</rdfs:label>
+  </owl:Class>
+</rdf:RDF>

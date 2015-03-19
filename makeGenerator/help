@@ -1,0 +1,7 @@
+Use: ./project [KEYS]...[PATH TO THE DIRECTORY]...
+
+This program helps you creating Makefile for your project.
+
+KEYS:
+-h				show help 
+-f"compiler options"		set variable CFLAGS in your Makefile

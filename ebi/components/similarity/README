@@ -1,0 +1,44 @@
+This is README file for simplify work with similarity component
+and for better understanding how to adjust it.
+There are "similarity.properties" file for it in webapp resource dir.
+
+It contains:
+
+# [URL to file, contains ontology]
+ontology_url=http://efo.svn.sourceforge.net/viewvc/efo/trunk/src/efoinowl/efo.owl
+
+# [ontology type for mapper]
+ontology_type=efo
+
+# [PubMed URL for citation similarity. Add id of publication]
+pub_med_url=http://eutils.ncbi.nlm.nih.gov/entrez/eutils/elink.fcgi?db=pubmed&id=
+
+# [max distance for similarity by ontology to store ]
+max_ontology_distance=3
+
+# [max distance for similarity by pubMed publications to store ]
+max_pubmed_distance=1
+
+# [path to file for temporary storing similarity result]
+# [before is will have been written to database]
+report_file=similarity.xml
+
+# [ database properties ]
+database_driver=org.exist.xmldb.DatabaseImpl
+database_user=admin
+database_pass=
+database_uri=xmldb:exist://
+experiment_collection=/ae
+
+# [maximum number of similar experiments to store in db]
+max_similarity=10
+
+# [name for file containing experiments in database]
+experiments_file=experiments.xml
+
+
+For adjust similarity you can change 3 parameters:
+max_similarity (most important), max_ontology_distance, max_pubmed_distance
+
+Other parameters are needed for specify some information but do not affect to 
+quality of similarity results.
